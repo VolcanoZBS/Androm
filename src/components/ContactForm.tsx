@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
 import { X, CheckCircle2 } from 'lucide-react';
-
-// Initialize Supabase client
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
 
 interface ContactFormProps {
   translations: {
@@ -30,13 +23,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ translations }) => {
     e.preventDefault();
     setStatus('submitting');
 
-    try {
-      const { error } = await supabase
-        .from('contact_requests')
-        .insert([formData]);
-
-      if (error) throw error;
-
+    // Simulate form submission delay
+    setTimeout(() => {
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setShowModal(true);
@@ -46,13 +34,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ translations }) => {
         setStatus('idle');
         setShowModal(false);
       }, 5000);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setStatus('error');
-      
-      // Reset error message after 5 seconds
-      setTimeout(() => setStatus('idle'), 5000);
-    }
+    }, 1000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
