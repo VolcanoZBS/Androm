@@ -59,10 +59,10 @@ const translations = {
     subtitle: 'Portofoliu de Lucrări',
     items: [
       {
-        title: 'Complex Rezidențial Modern',
-        category: 'Construcție Nouă',
-        image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80',
-        description: 'Complex rezidențial cu 50 de apartamente, finalizat în 2023. Include parcări subterane și spații verzi.',
+        title: 'Reabilitare termică',
+        category: 'Bd. Tineretului, Bucuresti',
+        image: '/Bloc Tineretului .jpg',
+        description: 'Reabilitare termică a unui bloc cu 2 scări și 120 de apartamente, terasa blocului, balcoane.',
       },
       {
         title: 'Renovare Clădire Istorică',
