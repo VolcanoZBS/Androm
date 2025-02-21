@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(50, 50)">
+    <!-- Buildings -->
+    <path d="M250 50 L450 150 L450 400 L250 500 L50 400 L50 150 Z" fill="#1e3a8a"/>
+    <path d="M150 200 L350 300 L350 450 L150 550 L50 450 L50 300 Z" fill="#2563eb"/>
+    <path d="M350 150 L450 200 L450 350 L350 400 L250 350 L250 200 Z" fill="#3b82f6"/>
+    
+    <!-- Curved Base -->
+    <path d="M0 450 C0 350, 500 350, 500 450" fill="none" stroke="#2563eb" stroke-width="20"/>
+  </g>
+</svg>
